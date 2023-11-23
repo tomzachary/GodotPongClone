@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciq6yl5jod7dg"]
+
+[ext_resource type="Script" path="res://scripts/Movement.gd" id="1_asgg5"]
+[ext_resource type="Texture2D" uid="uid://caw7dw4losj2w" path="res://art/paddle.png" id="1_xa0yy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb8uk"]
+size = Vector2(50, 250)
+
+[node name="Paddle" type="Area2D"]
+position = Vector2(-1, 250)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(26, -125)
+scale = Vector2(50, 50)
+texture = ExtResource("1_xa0yy")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(26, -125)
+shape = SubResource("RectangleShape2D_jb8uk")
+metadata/_edit_group_ = true
+
+[node name="Movement" type="Node2D" parent="."]
+script = ExtResource("1_asgg5")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://sq58qooy0avk"]
+
+[ext_resource type="Texture2D" uid="uid://cdn4f33bim4s7" path="res://art/pong.png" id="1_ia2t6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odrog"]
+size = Vector2(50, 50)
+
+[node name="Pong" type="Area2D"]
+position = Vector2(25, -25)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(50, 50)
+texture = ExtResource("1_ia2t6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_odrog")
+metadata/_edit_group_ = true
