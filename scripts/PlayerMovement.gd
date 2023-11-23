@@ -6,11 +6,12 @@ signal set_direction(direction: Vector2)
 func _ready():
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var direction:= Vector2()
 	if Input.is_action_pressed("up"):
 		direction.y -= 1
 	if Input.is_action_pressed("down"):
 		direction.y += 1
 	set_direction.emit(direction)
+	
 	
