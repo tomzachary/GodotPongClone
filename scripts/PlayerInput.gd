@@ -12,6 +12,7 @@ func _process(_delta):
 		direction.y -= 1
 	if Input.is_action_pressed("down"):
 		direction.y += 1
-	set_direction.emit(direction)
+	get_node("../Paddle/PaddleMovement").set_direction(direction)
+	#set_direction.emit(direction)
 	
 	

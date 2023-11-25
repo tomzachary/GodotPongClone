@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://u0q70trvie81"]
 
-[ext_resource type="Script" path="res://scripts/PlayerMovement.gd" id="1_les1j"]
 [ext_resource type="Script" path="res://actors/Player.gd" id="1_qfc0c"]
 [ext_resource type="PackedScene" uid="uid://ciq6yl5jod7dg" path="res://actors/paddle.tscn" id="2_72hhk"]
+[ext_resource type="Script" path="res://scripts/PlayerInput.gd" id="3_wkevx"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_qfc0c")
 
 [node name="Paddle" parent="." instance=ExtResource("2_72hhk")]
 
-[node name="Movement" type="Node2D" parent="."]
-script = ExtResource("1_les1j")
+[node name="PlayerInput" type="Node2D" parent="."]
+script = ExtResource("3_wkevx")
 
-[connection signal="set_direction" from="Movement" to="." method="_on_movement_set_direction"]
+[connection signal="set_direction" from="PlayerInput" to="." method="_on_movement_set_direction"]

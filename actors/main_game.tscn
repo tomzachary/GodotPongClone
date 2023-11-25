@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bovdeees4fb8s"]
+[gd_scene load_steps=7 format=3 uid="uid://bovdeees4fb8s"]
 
 [ext_resource type="Script" path="res://actors/main_game.gd" id="1_ufkue"]
 [ext_resource type="Texture2D" uid="uid://cgacexnujmtjq" path="res://art/background.png" id="1_ukyvg"]
 [ext_resource type="PackedScene" uid="uid://u0q70trvie81" path="res://actors/Player.tscn" id="2_omdqn"]
 [ext_resource type="PackedScene" uid="uid://sq58qooy0avk" path="res://actors/pong.tscn" id="3_g0oxb"]
 [ext_resource type="Script" path="res://actors/BackgroundSprite.gd" id="3_xcmdd"]
+[ext_resource type="Script" path="res://actors/InputListener.gd" id="6_m78xs"]
 
 [node name="MainGame" type="Area2D"]
 script = ExtResource("1_ufkue")
@@ -18,3 +19,6 @@ script = ExtResource("3_xcmdd")
 [node name="Player" parent="." instance=ExtResource("2_omdqn")]
 
 [node name="Pong" parent="." instance=ExtResource("3_g0oxb")]
+
+[node name="InputListener" type="Node" parent="."]
+script = ExtResource("6_m78xs")

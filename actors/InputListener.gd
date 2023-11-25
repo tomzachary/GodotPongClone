@@ -1,16 +1,11 @@
 extends Node
-
-@export var x_axis = 0
+signal key_pressed(key)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
-
-func _on_movement_set_direction(direction):
-	$Paddle/PaddleMovement.set_direction(direction)	
+func _process(delta):
+	#emit
+	key_pressed.emit()
