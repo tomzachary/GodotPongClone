@@ -12,4 +12,5 @@ script = ExtResource("1_qfc0c")
 [node name="Movement" type="Node2D" parent="."]
 script = ExtResource("1_les1j")
 
+[connection signal="move" from="Paddle" to="." method="_on_paddle_move"]
 [connection signal="set_direction" from="Movement" to="." method="_on_movement_set_direction"]
